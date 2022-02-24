@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="leagueprincipal.html" class="w3-bar-item w3-button w3-theme-l1">Pagina Principal</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"> <a href="leagueroles.html"><b>Menu</b> </a> </h4> 
+  <a class="w3-bar-item w3-button w3-hover-black" href="leaguerolestop.html">Top lane</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="leaguerolesjungle.html">Jungle</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="leaguerolesmid.html">Mid lane</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="leaguerolesadc.html">ADC</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="leaguerolessupp.html">Support</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Support</h1>
+      <p>El soporte es el que acompaña al adc en la bot lane, en la linea, el soporte es mas decisivo que el adc, una diferencia en oro entre los dos adcs se nota mucho, ademas, derribar la torre de bot es una de los mejores
+	  objetivos que se pueden tomar en el early game, pero no solo es importante en la linea, ademas en mid y late game, el soporte juega un papel clave a lo largo de toda la partida controlando la visión, y controlando objetivos 
+	  gracias a esta, se suele decir que es un rol debil en soloq, ya que dependes de tu equipo en que ellos hagan el daño, para wardear necesitaras prioridad de linea que te tiene que otorgar tu equipo, pero es una
+	  pieza muy importante en el equipo, controlando el mapa y aportando utilidad en peleas, ya sea engage con un tanque o un hooker, enchanters que aportan escudos/curaciones como lulu o soraka, supports de daño ap como vel koz o zyra, que
+	  matan al equipo entero por ti, y otras funciones.</p>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="images/suppicon.jpg" class="w3-border w3-padding-large w3-padding-32 w3-center" width="500">
+      <img src="images/suppicon2.png" class="w3-border w3-padding-large w3-padding-32 w3-center" width="500">
+    </div>
+  </div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>
